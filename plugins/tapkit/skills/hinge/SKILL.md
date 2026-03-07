@@ -43,12 +43,16 @@ To **add a comment** on a specific photo or prompt:
 2. The keyboard appears — type your comment with `type_text`
 3. Tap **"done"** on the keyboard or look for a send button
 
+**AI-suggested comment chips**: Hinge sometimes shows suggestion chips below prompts in the like panel (e.g., "Compare debate styles", "Ask her best comeback"). These are tappable shortcuts that auto-fill a comment. You can tap one to use it, or ignore them and type your own comment.
+
 ### Like / Pass Actions
 
 At the bottom of the profile card (above the tab bar), you'll see action buttons:
 
 - **Rose button** (left side) — purple/rose icon with a number showing your remaining roses. Tap to send a rose (premium like that gets priority)
-- **Send Priority Like** or **Like** button (right side) — pink/rose-colored button to like the profile
+- **Send Priority Like** or **Like** button (right side) — pink/rose-colored button to like the profile. **This button's position is dynamic** — its y-coordinate shifts depending on content above it (comment field, suggestion chips, etc.). Always re-check the button position after dismissing the keyboard — it may have shifted.
+
+**Warning: Only tap in the like panel area — do not swipe.** Swiping up near the like panel will dismiss it and scroll the profile instead. If the panel disappears, tap the heart icon on a content piece to re-open it.
 
 To **pass** on a profile:
 - Tap the **X button** if visible, OR
@@ -144,3 +148,4 @@ Rules:
 - **Profile order matters**: The first photo and first prompt are what most people see. When editing profiles, prioritize these
 - **Daily limits**: Free users have a limited number of likes per day. If likes run out, Hinge will show a "Come back tomorrow" message
 - **Keyboard dismissal**: After typing a comment, if the keyboard blocks action buttons, tap outside the text field or press home and reopen the conversation
+- **Unresponsive "Send Priority Like" recovery**: If the "Send Priority Like" button doesn't respond after 2 taps, dismiss the like panel and re-trigger it from a different content piece (another photo or prompt). This is more reliable than repeatedly tapping the same button.
