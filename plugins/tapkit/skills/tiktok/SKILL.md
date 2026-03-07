@@ -338,6 +338,160 @@ Accessed via three-dot menu > Filters on the search results page. Opens as a bot
 - **Search history**: Previous searches appear on the discovery page with clock icons. Tap X on each to delete, or "See more" to view full history.
 - **The search bar X button (~523, 118)**: Can be finicky to tap. If it doesn't respond, try tapping slightly to the left or use the back arrow instead.
 
+## Content Creation & Posting (Deep Dive)
+
+### Accessing the Creation Screen
+
+Tap the **+ button** in the center of the bottom tab bar (~310, 1240) from any screen. This opens the camera/creation screen.
+
+### Camera Screen Layout
+
+The creation screen has a dark theme with the live camera viewfinder as background.
+
+**Top area:**
+- **X close** (~45, 150) — exits creation, returns to previous screen
+- **"Add sound"** button (top center, ~310, 150) — music note icon, opens sound picker
+- **Flip camera** (~583, 150) — circular arrow, toggles front/rear camera
+
+**Right-side camera tools** (vertical column at ~x=583):
+1. **Flash** (~y=225) — sparkle icon, toggles flash off/on/auto. Icon changes to lightning bolt when on.
+2. **Timer** (~y=310) — clock icon, opens countdown sheet (3s or 10s) with draggable recording limit and "Start countdown" button
+3. **Layout** (~y=390) — grid icon, multi-panel recording layouts
+4. **Retouch** (~y=465) — sparkle-star icon, beauty/touch-up filters
+5. **Filters** (~y=540) — loops/chain icon, color filters
+6. **Ratio** (~y=615) — resize arrows icon, changes aspect ratio
+7. **Chevron down** (~y=690) — expands labels on all tools. Tapping again (chevron up) collapses them.
+
+**Mode selector** (horizontal, above record button):
+- **10m** — 10-minute video
+- **60s** — 60-second video
+- **15s** — 15-second video
+- **PHOTO** — take a photo (default on open)
+- **TEXT** — create text-based image post
+
+The mode selector is **swipeable, not tappable**. Swipe right on the mode bar (~y=970) to move from PHOTO toward video modes. Swipe left to move toward TEXT. The selected mode gets a pill highlight. In video modes (10m/60s/15s) the record button turns **red**. In PHOTO mode it's **white**.
+
+**Bottom area:**
+- **Record/capture button** (~310, 1055) — large circle, tap to capture photo or hold/tap to record video
+- **Templates/effects row** — circular thumbnails to the right of record button (scrollable)
+- **Gallery** (~45, 1196) — bottom-left, shows recent photo thumbnail, tap to upload from gallery
+- **Bottom mode tabs**: **POST** (default), **CREATE**, **LIVE**
+  - POST = standard post creation
+  - CREATE = similar to POST (may offer different editing tools)
+  - LIVE = go live (requires minimum follower count)
+
+### Add Sound Page
+
+Opened by tapping "Add sound" at the top of the camera screen. Appears as a bottom sheet.
+
+- **Tabs**: Hot, **For You** (default), Favorites, Recent
+- **Search icon** (magnifying glass, top-right) — search for specific sounds
+- **Sound list**: Each row shows album art, song name (bold, pink/red if currently playing), artist, post count, duration
+- **Scissors icon** — trim/edit the sound clip length
+- **Bookmark icon** — save to favorites
+- Tapping a sound selects it — it appears in the top bar as "[sound name] x" with an X to remove
+- Swipe down to dismiss the sound picker
+
+### TEXT Mode
+
+Swiping left past PHOTO opens the text post creator:
+- **Header**: "CREATE AN IMAGE OF YOUR TEXT" with back arrow
+- **Large text input area** — placeholder: "Share your thoughts or questions to spark discussions"
+- **Template examples** — horizontal scroll of styled templates
+- **"Next"** button (pink, bottom-right) — proceeds to style selection
+- **Keyboard** appears automatically
+- May show a promo overlay "Try creating text images" with example templates and "Try now" button (X to close)
+
+### Post-Capture Editing Screen
+
+After capturing a photo (or selecting from gallery), the editing screen appears:
+
+**Top area:**
+- **Back arrow** (`<`, ~45, 155) — go back to retake/discard
+- **Sound bar** — shows auto-assigned sound with X to remove (e.g., "Nearly Naile... x")
+- **Settings gear** (~583, 155) — top-right
+
+**Right-side editing tools** (~x=583):
+1. **Share/forward** (~y=225) — arrow icon
+2. **AI Alive** (~y=300) — "NEW" badge, AI animation feature that animates photos
+3. **Stickers/overlays** (~y=375) — layered squares icon
+4. **Crop/adjust** (~y=435) — crop frame icon
+5. **Slideshow/animation** (~y=495) — play icon, opens template editor with categories: Trending, Intro&Outro, Basic, Vibe, Dynamic. Templates include Velocity, Midnight Glow, Always Angry, Portrait, Neon Twin, etc.
+6. **Text** (~y=560) — "Aa" icon, add text overlays
+7. **Sticker/emoji** (~y=625) — speech bubble face icon
+8. **Effects/sparkle** (~y=690) — sparkle icon
+9. **Chevron down** (~y=750) — more tools
+
+**Bottom area:**
+- **Chevron** (~310, 1090) — pull up for more options
+- **"Collage"** — grid icon, create photo collage
+- **Photo thumbnail** — preview of captured photo
+- **"+"** button — add more photos to the post
+- **"Your Story"** (left button, outlined with avatar) — post as a Story
+- **"Next"** (right button, red/pink) — proceed to publishing page
+
+### Publishing Page
+
+The final step before posting. Reached by tapping "Next" on the editing screen.
+
+**Layout (top to bottom):**
+- **Back arrow** (`<`) — top-left, returns to editing screen
+- **Cover image** thumbnail with "Cover" label + **"+"** to add more photos
+- **"Add a catchy title"** — text input for post title (pink placeholder)
+- **Description area** — large text input with placeholder "Writing a long description can help get 3x more views on average."
+- **Quick-add tools row**:
+  - **#** — insert hashtags
+  - **@** — mention users
+  - **Trending icon** — add trending sounds/topics
+  - **"AI rewrite"** — sparkle pen icon, AI-powered caption rewriting
+  - **Expand icon** (right side) — fullscreen text editor
+- **Location** — with suggested location pills (e.g., "Salt Lake Valley", "Denver Colorado S...") — tap to add
+- **Add link** — attach a URL to the post
+- **"Everyone can view this post"** — privacy/visibility setting (tap to change: Everyone, Friends, Only me)
+- **More options** — opens detailed settings panel (see below)
+- **Share to** — cross-posting options
+
+**Bottom buttons:**
+- **"Drafts"** (outlined, left) — save as draft for later
+- **"Post"** (red/pink with upload arrow, right) — publish the post
+
+### More Options Panel
+
+Opened from the publishing page. Bottom sheet with toggles and settings:
+
+**Privacy settings:**
+- **Allow comments** — toggle (default ON)
+- **Allow reuse of content** — "Duet, Stitch, stickers, and add to Story" toggle (default ON)
+
+**Advanced settings:**
+- **Content disclosure and ads** — sub-page for branded content/ad disclosures
+- **Add alternative text** — accessibility description for screen readers
+- **AI-generated content** — toggle (default OFF) — labels content as AI-generated
+- **Identify similar products** — toggle (default ON) — enables TikTok Shop product matching
+- **Allow visual search** — toggle (default ON) — makes content discoverable via visual search
+- **Save to device** — toggle (default OFF) — saves post to camera roll
+- **Save posts with watermark** — toggle (default OFF) — adds TikTok watermark to saved content
+- **Audience controls** — toggle (default OFF) — limits to 18+ viewers
+
+### Exit Options
+
+When backing out of the editing screen with unsaved content, a menu appears:
+- **Discard** (red trash icon) — delete the content permanently
+- **Save draft** — save to drafts for later editing
+- **Send to friends** — share directly via DM
+
+### Creation Tips and Gotchas
+
+- **Mode selector is swipe-only**: You cannot tap on 10m/60s/15s to select them. You must swipe right/left on the mode bar area (~y=970).
+- **Permissions required**: Camera AND microphone must be enabled in iOS Settings > TikTok for full functionality. If mic is denied, you'll get a persistent overlay asking to grant access via Settings.
+- **Auto-assigned sounds**: When you capture a photo, TikTok may auto-assign a trending sound. Tap the X on the sound bar to remove it before posting.
+- **LIVE requires eligibility**: The LIVE tab at the bottom may not work for accounts with fewer followers. Tapping it may do nothing.
+- **Gallery upload**: Tap the gallery thumbnail (~45, 1196) at the bottom-left of the camera screen to upload existing photos/videos from the camera roll.
+- **"Your Story" vs "Post"**: "Your Story" publishes as an ephemeral Story (disappears after 24h). "Post" publishes permanently to your profile.
+- **AI rewrite**: The publishing page has an "AI rewrite" tool that can rewrite your caption using AI — useful for improving engagement.
+- **Drafts are local**: Saved drafts appear on your Profile tab in a private Drafts section. They are not published until you manually post them.
+- **Don't accidentally post**: The red "Post" button publishes immediately with no confirmation dialog. Double-check all details before tapping it.
+
 ## Key Workflows
 
 ### Browse the For You Feed
@@ -405,6 +559,46 @@ Accessed via three-dot menu > Filters on the search results page. Opens as a bot
 1. On search results page, tap desired tab (Top, Shop, Users, etc.)
 2. If tab not visible, swipe left on the tab bar to reveal more
 3. screenshot → verify tab content loaded
+```
+
+### Take and Post a Photo
+```
+1. Tap + button (~310, 1240) to open creation screen
+2. Ensure PHOTO mode is selected (white capture button)
+3. Tap the capture button (~310, 1055)
+4. Edit: add text (Aa), stickers, effects as needed
+5. Tap "Next" (~465, 1232)
+6. Add title, description with #hashtags and @mentions
+7. Set location, visibility, other options
+8. Tap "Post" to publish OR "Drafts" to save for later
+```
+
+### Record a Video
+```
+1. Tap + button (~310, 1240)
+2. Swipe right on mode bar (~300, 970) to select 15s/60s/10m
+3. Record button turns red — tap to start, tap again to stop
+   OR hold to record, release to stop
+4. Edit: add sound, text, effects, stickers
+5. Tap "Next" → fill in details → tap "Post"
+```
+
+### Add Sound to a Post
+```
+1. On camera screen, tap "Add sound" (~310, 150)
+2. Browse tabs (Hot, For You, Favorites, Recent) or search
+3. Tap a sound to select it — appears in top bar
+4. Tap scissors icon to trim the clip
+5. Tap X on the sound bar to remove it
+```
+
+### Create a Text Post
+```
+1. Tap + button (~310, 1240)
+2. Swipe left on mode bar past PHOTO to TEXT
+3. Type your text in the input area
+4. Tap "Next" → choose a template style
+5. Proceed to publishing page
 ```
 
 ### Visit a Creator's Profile
