@@ -374,11 +374,22 @@ The mode selector is **swipeable, not tappable**. Swipe right on the mode bar (~
 **Bottom area:**
 - **Record/capture button** (~310, 1055) — large circle, tap to capture photo or hold/tap to record video
 - **Templates/effects row** — circular thumbnails to the right of record button (scrollable)
-- **Gallery** (~45, 1196) — bottom-left, shows recent photo thumbnail, tap to upload from gallery
+- **Gallery** (~45, 1196) — bottom-left, shows recent photo thumbnail, tap to upload from gallery. See **Limited Photo Access** below if new photos don't appear.
 - **Bottom mode tabs**: **POST** (default), **CREATE**, **LIVE**
   - POST = standard post creation
   - CREATE = similar to POST (may offer different editing tools)
   - LIVE = go live (requires minimum follower count)
+
+### Limited Photo Access
+
+When TikTok has "Limited Access" to photos (not full library access), newly saved photos won't appear in TikTok's gallery automatically. To add them:
+1. Open TikTok's gallery (tap gallery thumbnail ~42, 1220 from camera screen)
+2. Tap the **"+" button** at the end of the photo grid — this opens the iOS system photo picker
+3. In the iOS picker, select the new photos (they appear with blue checkmarks when selected)
+4. Tap the **blue checkmark** (top-right, ~556, 209) to confirm
+5. Return to TikTok's gallery — the new photos now appear
+
+The iOS picker header says "Select more photos or deselect to remove access." It shows ALL device photos. The count at the bottom (e.g., "9 Items") reflects total photos TikTok can access.
 
 ### Add Sound Page
 
@@ -451,6 +462,11 @@ The final step before posting. Reached by tapping "Next" on the editing screen.
 - **More options** — opens detailed settings panel (see below)
 - **Share to** — cross-posting options
 
+**Additional details:**
+- **Character counter**: Shows at bottom-left (e.g., "144/4000") — max 4000 characters for description
+- **Post button in expanded editor**: In the expanded text editor view, the "Post" button moves to the **top-right** corner (red pill button ~556, 118)
+- **Keyboard dismiss**: `escape` may not dismiss the keyboard on the publishing page. Tapping outside the text field or using the expand/collapse icon works better.
+
 **Bottom buttons:**
 - **"Drafts"** (outlined, left) — save as draft for later
 - **"Post"** (red/pink with upload arrow, right) — publish the post
@@ -491,6 +507,10 @@ When backing out of the editing screen with unsaved content, a menu appears:
 - **AI rewrite**: The publishing page has an "AI rewrite" tool that can rewrite your caption using AI — useful for improving engagement.
 - **Drafts are local**: Saved drafts appear on your Profile tab in a private Drafts section. They are not published until you manually post them.
 - **Don't accidentally post**: The red "Post" button publishes immediately with no confirmation dialog. Double-check all details before tapping it.
+- **Publishing page text entry quirk**: `type_text` may not directly insert text into TikTok's description field. Instead, the text goes to the device clipboard. Workaround: tap the description field to trigger the iOS **Paste / Writing Tools / AutoFill** popup, then tap **"Paste"** to insert the text. This is reliable.
+- **Maximum 5 hashtags per post**: TikTok enforces a limit of 5 hashtags. If you include more, extras are auto-removed with a toast message "Maximum 5 hashtags. 2 removed." Plan your hashtags accordingly.
+- **Multi-select: tap selector circles, NOT image centers**: In multi-select mode, tapping the center of a photo opens a single-image preview instead of selecting it. You must tap the **circle selector** in the upper-right corner of the thumbnail (~x=589 for right column, ~x=186 for left column, at the top edge of the photo cell).
+- **Sound picker "For You" tab is contextual**: The For You tab in the sound picker shows personalized/contextual suggestions. The algorithm matches sounds to your content (e.g., bird photos surface "Three Little Birds").
 
 ## Key Workflows
 
