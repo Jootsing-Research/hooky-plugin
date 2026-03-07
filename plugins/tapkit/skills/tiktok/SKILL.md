@@ -186,6 +186,158 @@ Same full-screen format as regular videos but with:
 - **Link icon** below avatar (instead of + follow button)
 - Comments and likes are usually from the brand account
 
+## Search Feature (Deep Dive)
+
+### Accessing Search
+
+From the For You feed, tap the **magnifying glass icon** at the top-right of the top bar (~577, 118). This opens the Search Discovery Page.
+
+### Search Discovery Page (Before Searching)
+
+The discovery page appears when you first enter search, before typing a query.
+
+**Layout (top to bottom):**
+- **Back arrow** (`<`) — top-left (~30, 118), returns to For You feed
+- **Search bar** — placeholder text (gray, shows a suggested search term), **camera icon** (~475, 118) for visual search, red **"Search"** button (~555, 118)
+- **Recent searches** — Listed with icons: music note for sound searches, clock for text searches. Each has an **X** button on the right to delete. **"See more"** link expands the full list.
+- **Promo banner** — TikTok Shop voucher promotion with "Join" button (may not always appear)
+- **"You may like" section** — Suggested search terms as a bullet list:
+  - **Red bullet + red text** = personalized suggestions (recent activity, "Just watched" label)
+  - **Black bullet + black text** = general suggestions
+  - **Trend arrow icon + "Trending"** label = trending topics
+  - **"Refresh"** button (top-right of section) loads new suggestions
+- **"Popular LIVE" / "Viral songs"** toggle tabs at bottom:
+  - **Popular LIVE**: List of active live streamers with avatars, names, and colored status bullets (red = live)
+  - **Viral songs**: Numbered chart of trending songs with album art, song name, artist, post count. Top entries (#1, #2) have highlighted number backgrounds.
+- **Microphone icon** (~575, 878) — floating button for voice search
+- **"Help us improve" | "Learn more"** links at very bottom
+
+**Keyboard** appears automatically with a blue "search" button.
+
+### Typing a Search Query (Autocomplete)
+
+As you type, the page switches to autocomplete suggestions:
+
+- **Search bar** shows typed text with cursor, **X clear button** (~483, 118) appears to clear text
+- **Suggestion list**: Each row has:
+  - Magnifying glass icon (left)
+  - Query text — typed portion in **pink/red**, completion text in **black**
+  - **Fill arrow** (~580, right side) — tapping this fills the suggestion into the search bar WITHOUT executing the search, allowing further refinement
+  - Some suggestions show a **thumbnail image** (for creator accounts)
+- **"Press and hold on a suggestion to report it"** hint at bottom
+- Tap a suggestion directly to execute that search
+- Tap the blue **"search"** button on the keyboard or the red **"Search"** button to search for exactly what's typed
+
+### Search Results Page
+
+After executing a search, results appear with a rich multi-tab interface.
+
+**Header:**
+- **Back arrow** (`<`) — returns to search discovery page
+- **Search bar** — shows current query with **X clear button** (~523, 118) and **three-dot menu** (~583, 118)
+- Three-dot menu opens a bottom sheet with:
+  - **Filters** — opens advanced filter panel
+  - **Share feedback** — report issues
+
+**Result Tabs** (horizontal scroll, 9 total):
+1. **Top** (default) — Mixed results with AI summary + video grid
+2. **Shop** — TikTok Shop product listings
+3. **Users** — Creator/account search results
+4. **Videos** — Video-only grid
+5. **Sounds** — Sound/music results
+6. **LIVE** — Active live streams matching query
+7. **Places** — Location-based results
+8. **Photos** — Photo post results
+9. **Hashtags** — Matching hashtags
+
+The tab bar is horizontally scrollable — you won't see all 9 at once. Swipe left on the tab bar to reveal more tabs.
+
+#### Top Tab
+
+- **Sub-filter pills** (horizontal scroll below tabs): Contextual refinements like "Latest", "Easy", "Dinner", "Beginners", "Healthy", etc. Tapping a pill refines results and updates the AI summary. Selected pill gets a bold border.
+- **Search Highlights card** (AI-generated):
+  - Green checkmark badge + "Search Highlights"
+  - "AI summary from [source avatars] +N"
+  - AI-generated text summary with recipe/info extracted from videos
+  - Three-dot menu (top-right of card)
+  - **"See more >"** link — opens a full-page expanded AI summary with structured content (ingredients, methods, numbered steps) and embedded video thumbnails with play buttons and like counts
+- **Video grid** (2-column) below the highlights: thumbnail, caption (truncated), creator avatar + name, heart + like count, date posted. Some thumbnails have a **bookmark icon** overlay.
+
+#### Shop Tab
+
+- **Filter pills**: Filter icon, Sort (dropdown), Free shipping, 4 Stars & Up, Clearance, Deals
+- **"TikTok Shop Protection Free returns"** banner
+- **Product cards** (2-column grid): Product image, name, star rating, sold count, price with original/discount, badges ("Free shipping", "Sponsored", "Most Loved", "OFFICIAL"), coupon info, video play icons for video reviews
+
+#### Users Tab
+
+- **User list** (full-width rows): Avatar, username (bold), display name, follower count + like count, red **"Follow"** button
+- Verified accounts have **blue checkmark** badges
+- Some show "Followed by [mutual connections]" instead of stats
+
+#### Videos Tab
+
+- **2-column video grid**: Large thumbnails with text overlays, caption/subtitle icons, sound icons. Below: caption, creator avatar + name, date, heart + like count
+
+#### Sounds Tab
+
+- **Sound list** (full-width rows): Album art thumbnail (some with play button), sound name (bold), creator/artist, duration, video count
+- Red **video camera icon** on right — tap to create video with that sound
+
+#### LIVE Tab
+
+- **2-column grid** of live stream thumbnails: Red "LIVE" badge + viewer count or thumbs-up count. Stream title and creator avatar + username below.
+
+#### Places Tab
+
+- **Place list** (full-width rows): Map pin icon, place name (bold), category (Restaurant, Bakery, etc.), full address
+
+#### Photos Tab
+
+- **Masonry grid** (2-column, variable height): Photo thumbnails with date stamp overlay, caption below, creator avatar + name, heart + like count
+
+#### Hashtags Tab
+
+- **Hashtag list** (full-width rows): # icon, hashtag name (bold), post count. Red **video camera icon** on right to create video with that hashtag.
+
+### Advanced Filters
+
+Accessed via three-dot menu > Filters on the search results page. Opens as a bottom sheet.
+
+**Sort by** (single-select pills):
+- Relevance (default)
+- Like count
+- Latest
+
+**Video category** (single-select pills):
+- All (default)
+- Unwatched
+- Watched
+- Liked
+- People you follow
+
+**Date posted** (single-select pills):
+- All (default)
+- Past 24 hours
+- This week
+- This month
+- Last 3 months
+- Last 6 months
+
+**Actions**: "Cancel" (top-left) dismisses without applying, "Apply" (top-right, pink/red) applies selected filters. Swipe down on the sheet also dismisses.
+
+### Search Tips and Gotchas
+
+- **Placeholder text is not real text**: The search bar shows gray placeholder/suggestion text (e.g., a trending topic). Tapping the bar and typing replaces it — no need to clear it first.
+- **Camera icon** (~475, 118) on the search discovery page opens visual/image search. Only visible before executing a search — replaced by X clear button on results page.
+- **Voice search**: Tap the floating microphone icon (~575, 878) on the discovery page, or the mic on the keyboard.
+- **9 result tabs**: Tab bar scrolls horizontally. Full list: Top, Shop, Users, Videos, Sounds, LIVE, Places, Photos, Hashtags. Swipe left on tabs to reveal hidden ones.
+- **AI Search Highlights**: Not available for all queries. Appears on Top tab for queries with enough matching content. "See more" expands to a full article-style page.
+- **Sub-filter pills are contextual**: They change based on the search query (e.g., food searches get "Easy", "Dinner"; other queries get different refinements).
+- **Filters only apply to current tab**: Changing tabs may reset filter selections.
+- **Search history**: Previous searches appear on the discovery page with clock icons. Tap X on each to delete, or "See more" to view full history.
+- **The search bar X button (~523, 118)**: Can be finicky to tap. If it doesn't respond, try tapping slightly to the left or use the back arrow instead.
+
 ## Key Workflows
 
 ### Browse the For You Feed
@@ -234,8 +386,25 @@ Same full-screen format as regular videos but with:
 1. Tap the search icon (magnifying glass, ~577, 118) in top bar
 2. screenshot → search page appears
 3. Tap the search field → type_text("search query")
-4. Tap Search on keyboard
-5. screenshot → view results
+4. screenshot → verify autocomplete suggestions appear
+5. Tap blue "search" button on keyboard OR tap a suggestion
+6. screenshot → verify results page with tabs
+```
+
+### Filter Search Results
+```
+1. On search results page, tap three-dot menu (~583, 118)
+2. Tap "Filters"
+3. Select desired Sort by / Video category / Date posted pills
+4. Tap "Apply" (top-right of filter sheet)
+5. screenshot → verify filtered results
+```
+
+### Browse Search Result Tabs
+```
+1. On search results page, tap desired tab (Top, Shop, Users, etc.)
+2. If tab not visible, swipe left on the tab bar to reveal more
+3. screenshot → verify tab content loaded
 ```
 
 ### Visit a Creator's Profile
