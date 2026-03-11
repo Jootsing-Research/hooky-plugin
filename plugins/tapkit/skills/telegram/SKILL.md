@@ -9,29 +9,27 @@ Telegram is a messaging app with chats, groups, channels, and bots. Users send m
 
 ## App Structure
 
-### Tab Bar (bottom of screen, y ~ 1248)
+### Tab Bar (bottom of screen)
 
-Telegram has 5 tabs along the bottom navigation bar:
+Telegram has 5 tabs along the bottom navigation bar, evenly spaced left to right:
 
-| Tab | Approx x | What it does |
-|-----|----------|-------------|
-| **Contacts** | ~88 | All contacts alphabetically with search, sort, invite friends, and add (+) button |
-| **Calls** | ~205 | Call history with All/Missed toggle filter and "Start New Call" link |
-| **Chats** | ~320 | Main chat list — where 90% of interaction happens |
-| **Settings** | ~430 | Profile, account settings, preferences |
-| **Search** | ~555 | Global search across chats, contacts, messages. Shows FAQ when empty |
+1. **Contacts** — All contacts alphabetically with search, sort, invite friends, and add (+) button
+2. **Calls** — Call history with All/Missed toggle filter and "Start New Call" link
+3. **Chats** — Main chat list — where 90% of interaction happens
+4. **Settings** — Profile, account settings, preferences
+5. **Search** (magnifying glass) — Global search across chats, contacts, messages. Shows FAQ when empty
 
 ## The Chats Tab (Most Important)
 
-### Top Bar (y ~ 120)
-- **"Edit" button** (x ~ 57) — for bulk editing/selecting chats
-- **Camera button** (x ~ 505) — **THIS IS A CAMERA, NOT NEW MESSAGE!** Opens a quick camera with Live/Video/Photo modes. Do NOT tap this when trying to compose a new message.
-- **Compose button** (pen icon, x ~ 565) — THIS is how you start a new message. Opens a screen with: New Group, New Contact, New Channel, plus a searchable contact list with alphabet scrubber on right edge.
+### Top Bar
+- **"Edit" button** (top-left) — for bulk editing/selecting chats
+- **Camera button** (top-right area) — **THIS IS A CAMERA, NOT NEW MESSAGE!** Opens a quick camera with Live/Video/Photo modes. Do NOT tap this when trying to compose a new message.
+- **Compose button** (pen icon, far top-right) — THIS is how you start a new message. Opens a screen with: New Group, New Contact, New Channel, plus a searchable contact list with alphabet scrubber on right edge.
 
-### Chat Filter Tabs (y ~ 193, horizontally scrollable)
+### Chat Filter Tabs (horizontally scrollable, below top bar)
 
 The filter row sits just below the top bar. Swipe left/right to reveal more tabs.
-- **All** (x ~ 57) — shows every conversation (DMs, groups, channels, bots)
+- **All** — shows every conversation (DMs, groups, channels, bots)
 - **Personal** — only 1-on-1 DMs (has count badge like "133")
 - **Unread Group** — only groups with unread messages (has count badge)
 - **Custom folders** — user-created folders (e.g., "Work", "Photobooth"). These vary per account.
@@ -172,7 +170,7 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 
 ### Send a Message to an Existing Chat
 ```
-1. Tap the Chats tab (~320, 1248)
+1. Tap the Chats tab (3rd tab from left in bottom bar)
 2. screenshot → verify chat list visible
 3. Tap on the desired chat in the list
 4. Tap the "Message" text field at the bottom
@@ -183,8 +181,8 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 
 ### Start a New Message
 ```
-1. Tap the Chats tab (~320, 1248)
-2. Tap the compose button (pen icon, ~565, 120) — NOT the ⊕ camera button
+1. Tap the Chats tab
+2. Tap the compose button (pen icon, top-right) — NOT the camera button next to it
 3. screenshot → verify contact list / compose screen
 4. Search for or select a contact
 5. Tap the "Message" field → type_text("your message") → send
@@ -192,8 +190,8 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 
 ### Browse Chat Filters
 ```
-1. On Chats tab, look at filter row (y ~ 193)
-2. Tap "All" (~57, 193) for all chats, or "Personal" for DMs only
+1. On Chats tab, look at the filter row below the top bar
+2. Tap "All" for all chats, or "Personal" for DMs only
 3. Swipe left on the filter row to reveal more custom folders
 4. Tap desired folder tab
 5. screenshot → verify filtered chat list
@@ -217,7 +215,7 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 
 ### Search Globally
 ```
-1. Tap the Search tab (~555, 1248)
+1. Tap the Search tab (5th/rightmost tab in bottom bar)
 2. Keyboard auto-focuses — just start typing with type_text("query")
 3. screenshot → verify results
 ```
@@ -240,7 +238,7 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 
 ## Tips and Gotchas
 
-- **The ⊕ button is NOT compose** — it's a camera! The compose/new message button is the pen icon NEXT to it (x ~ 565). This will trip up agents who assume ⊕ = new message.
+- **The camera button is NOT compose** — it's a camera! The compose/new message button is the pen icon to the right of it. This will trip up agents who assume the camera icon = new message.
 - **Bottom-right icon changes by chat type**: Microphone in DMs, Camera in groups, Microphone in bot chats. When you start typing, all change to a Send arrow.
 - **The back button shows unread count** — the "< 689" back button in chats shows the total unread count for the chat list. Useful for knowing how many unreads exist without going back.
 - **Muted vs unmuted unread badges** — Blue badges = unmuted unreads (important). Gray badges = muted unreads. Prioritize blue badges.
@@ -249,6 +247,6 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 - **Bot chats have a unique "≡ Menu" button** — No other chat type has this. It's specific to bot interactions and opens the bot's command palette.
 - **Sponsored ads can appear** in bot chats — They have a "what's this?" label and X dismiss button. Dismiss these to avoid confusion.
 - **The Search tab** immediately opens the keyboard and shows FAQ by default. Just start typing — no need to tap the search field first since it auto-focuses.
-- **Navigation back**: Tap "< [count]" in top-left (y ~ 120, x ~ 70) or swipe right from the left edge of the screen.
+- **Navigation back**: Tap the "< [count]" back button in the top-left or swipe right from the left edge of the screen.
 - **Channels are read-only** — they look like groups in the chat list but have no message input. Check for "Sending messages is not allowed" text before trying to send. Forwarding and reacting are the main interactions.
 - **Message checkmarks**: Single ✓ = sent, double ✓✓ gray = delivered, double ✓✓ blue = read. These show in chat list previews and inside chats.
