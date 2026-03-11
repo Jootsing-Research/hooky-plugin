@@ -25,8 +25,7 @@ The tab bar is visible on the main feed but hides when you enter certain sub-vie
 
 When on the Home tab, there are horizontal feed tabs at the top of the screen:
 
-- **LIVE** (far left) — Opens a live stream feed. Swipe up/down between live streams. To exit a live, tap the X in the top-right — **aim at x=630, which is beyond the visible screen edge**. This is critical; tapping at visible x positions (590-618) hits the adjacent toggle button instead.
-- **STEM** — Science/technology/engineering/math curated feed (same full-screen format as For You)
+- **LIVE** (far left) — Opens a live stream feed. Swipe up/down between live streams. To exit a live, tap the X in the top-right corner — **aim beyond the visible edge of the screen**. This is critical; tapping at visible positions hits the adjacent toggle button instead.
 - **Explore** — 2-column grid of trending/recommended videos with thumbnails, titles, creators, and like counts
 - **Local** — 2-column grid of location-based content
 - **Following** — Videos from followed accounts only. Has a stories row at top (Create button, then followed creators with colored rings — pink for LIVE, cyan for active)
@@ -39,15 +38,15 @@ The For You feed shows one full-screen vertical video at a time. The video fills
 
 ### Right Side Action Buttons
 
-A vertical column of action buttons on the right side of the video (all at approximately x=575):
+A vertical column of action buttons on the right side of the video:
 
-1. **Creator Avatar** (~y=630) — Circular profile photo. Has a red **+** button below it if you're not following the creator. Tap → opens creator's profile page.
-2. **Heart / Like** (~y=740) — White outline when not liked, solid red/pink when liked. Shows like count below. Tap to toggle like/unlike.
-3. **Comment** (~y=860) — Speech bubble icon with comment count. Tap → opens comment section as a bottom sheet.
-4. **Bookmark / Save** (~y=920) — Bookmark icon with save count. Tap to toggle save/unsave.
-5. **Share** (~y=1010) — Forward arrow icon with share count. Tap → opens share sheet.
+1. **Creator Avatar** (top of column) — Circular profile photo. Has a red **+** button below it if you're not following the creator. Tap to open creator's profile page.
+2. **Heart / Like** — White outline when not liked, solid red/pink when liked. Shows like count below. Tap to toggle like/unlike.
+3. **Comment** — Speech bubble icon with comment count. Tap to open comment section as a bottom sheet.
+4. **Bookmark / Save** — Bookmark icon with save count. Tap to toggle save/unsave.
+5. **Share** — Forward arrow icon with share count. Tap to open share sheet.
 
-**Important:** These y-coordinates shift slightly between videos. If a tap doesn't hit the intended button, adjust by ~20px up or down. The buttons are spaced roughly 80-90px apart vertically.
+**Important:** These buttons shift slightly between videos. If a tap doesn't hit the intended button, adjust up or down. The buttons are spaced roughly evenly apart vertically.
 
 ### Bottom-Left Info Area
 
@@ -55,11 +54,11 @@ A vertical column of action buttons on the right side of the video (all at appro
 - **"↻ Repost to followers"** link
 - **Creator name** — Tappable, opens their profile
 - **Caption text** — Shows first 2 lines with hashtags. Truncated with "... more" to expand. Tap "more" to see full caption. Tap "less" to collapse.
-- **Music/sound ticker** — "♫ [sound name] - [artist]..." Tappable → opens Sound page
+- **Music/sound ticker** — "♫ [sound name] - [artist]..." Tappable, opens Sound page
 
 ### Bottom-Right
 
-- **Music disc** — Small spinning circular avatar at the very bottom-right (~y=1130). Tap → opens the Sound page showing all videos using this sound, with "Add to Favorites" and "Use sound" options.
+- **Music disc** — Small spinning circular avatar at the very bottom-right. Tap to open the Sound page showing all videos using this sound, with "Add to Favorites" and "Use sound" options.
 
 ### Bottom Bar (Conditional)
 
@@ -86,7 +85,7 @@ Some videos show additional elements above the tab bar:
 - **Double tap** (center of video) — Like the video (heart animation appears, heart icon turns red)
 - **Long press** (center of video) — Opens context menu bottom sheet
 
-Use `swipe(200, 700, "up")` for next video and `swipe(200, 700, "down")` for previous. Avoid swiping from screen edges to prevent triggering iOS gestures or AssistiveTouch.
+Use `swipe` from the center-left area of the screen for next/previous video. Avoid swiping from screen edges to prevent triggering iOS gestures or AssistiveTouch.
 
 ## Comment Section
 
@@ -190,15 +189,15 @@ Same full-screen format as regular videos but with:
 
 ### Accessing Search
 
-From the For You feed, tap the **magnifying glass icon** at the top-right of the top bar (~577, 118). This opens the Search Discovery Page.
+From the For You feed, tap the **magnifying glass icon** at the top-right of the top bar. This opens the Search Discovery Page.
 
 ### Search Discovery Page (Before Searching)
 
 The discovery page appears when you first enter search, before typing a query.
 
 **Layout (top to bottom):**
-- **Back arrow** (`<`) — top-left (~30, 118), returns to For You feed
-- **Search bar** — placeholder text (gray, shows a suggested search term), **camera icon** (~475, 118) for visual search, red **"Search"** button (~555, 118)
+- **Back arrow** (`<`) — top-left, returns to For You feed
+- **Search bar** — placeholder text (gray, shows a suggested search term), **camera icon** for visual search, red **"Search"** button to the right
 - **Recent searches** — Listed with icons: music note for sound searches, clock for text searches. Each has an **X** button on the right to delete. **"See more"** link expands the full list.
 - **Promo banner** — TikTok Shop voucher promotion with "Join" button (may not always appear)
 - **"You may like" section** — Suggested search terms as a bullet list:
@@ -209,7 +208,7 @@ The discovery page appears when you first enter search, before typing a query.
 - **"Popular LIVE" / "Viral songs"** toggle tabs at bottom:
   - **Popular LIVE**: List of active live streamers with avatars, names, and colored status bullets (red = live)
   - **Viral songs**: Numbered chart of trending songs with album art, song name, artist, post count. Top entries (#1, #2) have highlighted number backgrounds.
-- **Microphone icon** (~575, 878) — floating button for voice search
+- **Microphone icon** — floating button for voice search (bottom-right area)
 - **"Help us improve" | "Learn more"** links at very bottom
 
 **Keyboard** appears automatically with a blue "search" button.
@@ -218,11 +217,11 @@ The discovery page appears when you first enter search, before typing a query.
 
 As you type, the page switches to autocomplete suggestions:
 
-- **Search bar** shows typed text with cursor, **X clear button** (~483, 118) appears to clear text
+- **Search bar** shows typed text with cursor, **X clear button** appears to clear text
 - **Suggestion list**: Each row has:
   - Magnifying glass icon (left)
   - Query text — typed portion in **pink/red**, completion text in **black**
-  - **Fill arrow** (~580, right side) — tapping this fills the suggestion into the search bar WITHOUT executing the search, allowing further refinement
+  - **Fill arrow** (right side) — tapping this fills the suggestion into the search bar WITHOUT executing the search, allowing further refinement
   - Some suggestions show a **thumbnail image** (for creator accounts)
 - **"Press and hold on a suggestion to report it"** hint at bottom
 - Tap a suggestion directly to execute that search
@@ -234,7 +233,7 @@ After executing a search, results appear with a rich multi-tab interface.
 
 **Header:**
 - **Back arrow** (`<`) — returns to search discovery page
-- **Search bar** — shows current query with **X clear button** (~523, 118) and **three-dot menu** (~583, 118)
+- **Search bar** — shows current query with **X clear button** and **three-dot menu** to the right
 - Three-dot menu opens a bottom sheet with:
   - **Filters** — opens advanced filter panel
   - **Share feedback** — report issues
@@ -329,38 +328,38 @@ Accessed via three-dot menu > Filters on the search results page. Opens as a bot
 ### Search Tips and Gotchas
 
 - **Placeholder text is not real text**: The search bar shows gray placeholder/suggestion text (e.g., a trending topic). Tapping the bar and typing replaces it — no need to clear it first.
-- **Camera icon** (~475, 118) on the search discovery page opens visual/image search. Only visible before executing a search — replaced by X clear button on results page.
-- **Voice search**: Tap the floating microphone icon (~575, 878) on the discovery page, or the mic on the keyboard.
+- **Camera icon** on the search discovery page opens visual/image search. Only visible before executing a search — replaced by X clear button on results page.
+- **Voice search**: Tap the floating microphone icon on the discovery page, or the mic on the keyboard.
 - **9 result tabs**: Tab bar scrolls horizontally. Full list: Top, Shop, Users, Videos, Sounds, LIVE, Places, Photos, Hashtags. Swipe left on tabs to reveal hidden ones.
 - **AI Search Highlights**: Not available for all queries. Appears on Top tab for queries with enough matching content. "See more" expands to a full article-style page.
 - **Sub-filter pills are contextual**: They change based on the search query (e.g., food searches get "Easy", "Dinner"; other queries get different refinements).
 - **Filters only apply to current tab**: Changing tabs may reset filter selections.
 - **Search history**: Previous searches appear on the discovery page with clock icons. Tap X on each to delete, or "See more" to view full history.
-- **The search bar X button (~523, 118)**: Can be finicky to tap. If it doesn't respond, try tapping slightly to the left or use the back arrow instead.
+- **The search bar X button**: Can be finicky to tap. If it doesn't respond, try tapping slightly to the left or use the back arrow instead.
 
 ## Content Creation & Posting (Deep Dive)
 
 ### Accessing the Creation Screen
 
-Tap the **+ button** in the center of the bottom tab bar (~310, 1240) from any screen. This opens the camera/creation screen.
+Tap the **+ button** in the center of the bottom tab bar from any screen. This opens the camera/creation screen.
 
 ### Camera Screen Layout
 
 The creation screen has a dark theme with the live camera viewfinder as background.
 
 **Top area:**
-- **X close** (~45, 150) — exits creation, returns to previous screen
-- **"Add sound"** button (top center, ~310, 150) — music note icon, opens sound picker
-- **Flip camera** (~583, 150) — circular arrow, toggles front/rear camera
+- **X close** (top-left) — exits creation, returns to previous screen
+- **"Add sound"** button (top center) — music note icon, opens sound picker
+- **Flip camera** (top-right) — circular arrow, toggles front/rear camera
 
-**Right-side camera tools** (vertical column at ~x=583):
-1. **Flash** (~y=225) — sparkle icon, toggles flash off/on/auto. Icon changes to lightning bolt when on.
-2. **Timer** (~y=310) — clock icon, opens countdown sheet (3s or 10s) with draggable recording limit and "Start countdown" button
-3. **Layout** (~y=390) — grid icon, multi-panel recording layouts
-4. **Retouch** (~y=465) — sparkle-star icon, beauty/touch-up filters
-5. **Filters** (~y=540) — loops/chain icon, color filters
-6. **Ratio** (~y=615) — resize arrows icon, changes aspect ratio
-7. **Chevron down** (~y=690) — expands labels on all tools. Tapping again (chevron up) collapses them.
+**Right-side camera tools** (vertical column on the right edge):
+1. **Flash** (top of column) — sparkle icon, toggles flash off/on/auto. Icon changes to lightning bolt when on.
+2. **Timer** — clock icon, opens countdown sheet (3s or 10s) with draggable recording limit and "Start countdown" button
+3. **Layout** — grid icon, multi-panel recording layouts
+4. **Retouch** — sparkle-star icon, beauty/touch-up filters
+5. **Filters** — loops/chain icon, color filters
+6. **Ratio** — resize arrows icon, changes aspect ratio
+7. **Chevron down** (bottom of column) — expands labels on all tools. Tapping again (chevron up) collapses them.
 
 **Mode selector** (horizontal, above record button):
 - **10m** — 10-minute video
@@ -369,12 +368,12 @@ The creation screen has a dark theme with the live camera viewfinder as backgrou
 - **PHOTO** — take a photo (default on open)
 - **TEXT** — create text-based image post
 
-The mode selector is **swipeable, not tappable**. Swipe right on the mode bar (~y=970) to move from PHOTO toward video modes. Swipe left to move toward TEXT. The selected mode gets a pill highlight. In video modes (10m/60s/15s) the record button turns **red**. In PHOTO mode it's **white**.
+The mode selector is **swipeable, not tappable**. Swipe right on the mode bar to move from PHOTO toward video modes. Swipe left to move toward TEXT. The selected mode gets a pill highlight. In video modes (10m/60s/15s) the record button turns **red**. In PHOTO mode it's **white**.
 
 **Bottom area:**
-- **Record/capture button** (~310, 1055) — large circle, tap to capture photo or hold/tap to record video
+- **Record/capture button** (center) — large circle, tap to capture photo or hold/tap to record video
 - **Templates/effects row** — circular thumbnails to the right of record button (scrollable)
-- **Gallery** (~45, 1196) — bottom-left, shows recent photo thumbnail, tap to upload from gallery. See **Limited Photo Access** below if new photos don't appear.
+- **Gallery** (bottom-left) — shows recent photo thumbnail, tap to upload from gallery. See **Limited Photo Access** below if new photos don't appear.
 - **Bottom mode tabs**: **POST** (default), **CREATE**, **LIVE**
   - POST = standard post creation
   - CREATE = similar to POST (may offer different editing tools)
@@ -383,10 +382,10 @@ The mode selector is **swipeable, not tappable**. Swipe right on the mode bar (~
 ### Limited Photo Access
 
 When TikTok has "Limited Access" to photos (not full library access), newly saved photos won't appear in TikTok's gallery automatically. To add them:
-1. Open TikTok's gallery (tap gallery thumbnail ~42, 1220 from camera screen)
+1. Open TikTok's gallery (tap gallery thumbnail at bottom-left of camera screen)
 2. Tap the **"+" button** at the end of the photo grid — this opens the iOS system photo picker
 3. In the iOS picker, select the new photos (they appear with blue checkmarks when selected)
-4. Tap the **blue checkmark** (top-right, ~556, 209) to confirm
+4. Tap the **blue checkmark** (top-right) to confirm
 5. Return to TikTok's gallery — the new photos now appear
 
 The iOS picker header says "Select more photos or deselect to remove access." It shows ALL device photos. The count at the bottom (e.g., "9 Items") reflects total photos TikTok can access.
@@ -418,23 +417,23 @@ Swiping left past PHOTO opens the text post creator:
 After capturing a photo (or selecting from gallery), the editing screen appears:
 
 **Top area:**
-- **Back arrow** (`<`, ~45, 155) — go back to retake/discard
+- **Back arrow** (`<`, top-left) — go back to retake/discard
 - **Sound bar** — shows auto-assigned sound with X to remove (e.g., "Nearly Naile... x")
-- **Settings gear** (~583, 155) — top-right
+- **Settings gear** (top-right)
 
-**Right-side editing tools** (~x=583):
-1. **Share/forward** (~y=225) — arrow icon
-2. **AI Alive** (~y=300) — "NEW" badge, AI animation feature that animates photos
-3. **Stickers/overlays** (~y=375) — layered squares icon
-4. **Crop/adjust** (~y=435) — crop frame icon
-5. **Slideshow/animation** (~y=495) — play icon, opens template editor with categories: Trending, Intro&Outro, Basic, Vibe, Dynamic. Templates include Velocity, Midnight Glow, Always Angry, Portrait, Neon Twin, etc.
-6. **Text** (~y=560) — "Aa" icon, add text overlays
-7. **Sticker/emoji** (~y=625) — speech bubble face icon
-8. **Effects/sparkle** (~y=690) — sparkle icon
-9. **Chevron down** (~y=750) — more tools
+**Right-side editing tools** (vertical column on the right edge):
+1. **Share/forward** (top of column) — arrow icon
+2. **AI Alive** — "NEW" badge, AI animation feature that animates photos
+3. **Stickers/overlays** — layered squares icon
+4. **Crop/adjust** — crop frame icon
+5. **Slideshow/animation** — play icon, opens template editor with categories: Trending, Intro&Outro, Basic, Vibe, Dynamic. Templates include Velocity, Midnight Glow, Always Angry, Portrait, Neon Twin, etc.
+6. **Text** — "Aa" icon, add text overlays
+7. **Sticker/emoji** — speech bubble face icon
+8. **Effects/sparkle** — sparkle icon
+9. **Chevron down** (bottom of column) — more tools
 
 **Bottom area:**
-- **Chevron** (~310, 1090) — pull up for more options
+- **Chevron** (center) — pull up for more options
 - **"Collage"** — grid icon, create photo collage
 - **Photo thumbnail** — preview of captured photo
 - **"+"** button — add more photos to the post
@@ -464,7 +463,7 @@ The final step before posting. Reached by tapping "Next" on the editing screen.
 
 **Additional details:**
 - **Character counter**: Shows at bottom-left (e.g., "144/4000") — max 4000 characters for description
-- **Post button in expanded editor**: In the expanded text editor view, the "Post" button moves to the **top-right** corner (red pill button ~556, 118)
+- **Post button in expanded editor**: In the expanded text editor view, the "Post" button moves to the **top-right** corner (red pill button)
 - **Keyboard dismiss**: `escape` may not dismiss the keyboard on the publishing page. Tapping outside the text field or using the expand/collapse icon works better.
 
 **Bottom buttons:**
@@ -498,18 +497,18 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Creation Tips and Gotchas
 
-- **Mode selector is swipe-only**: You cannot tap on 10m/60s/15s to select them. You must swipe right/left on the mode bar area (~y=970).
+- **Mode selector is swipe-only**: You cannot tap on 10m/60s/15s to select them. You must swipe right/left on the mode bar area.
 - **Permissions required**: Camera AND microphone must be enabled in iOS Settings > TikTok for full functionality. If mic is denied, you'll get a persistent overlay asking to grant access via Settings.
 - **Auto-assigned sounds**: When you capture a photo, TikTok may auto-assign a trending sound. Tap the X on the sound bar to remove it before posting.
 - **LIVE requires eligibility**: The LIVE tab at the bottom may not work for accounts with fewer followers. Tapping it may do nothing.
-- **Gallery upload**: Tap the gallery thumbnail (~45, 1196) at the bottom-left of the camera screen to upload existing photos/videos from the camera roll.
+- **Gallery upload**: Tap the gallery thumbnail at the bottom-left of the camera screen to upload existing photos/videos from the camera roll.
 - **"Your Story" vs "Post"**: "Your Story" publishes as an ephemeral Story (disappears after 24h). "Post" publishes permanently to your profile.
 - **AI rewrite**: The publishing page has an "AI rewrite" tool that can rewrite your caption using AI — useful for improving engagement.
 - **Drafts are local**: Saved drafts appear on your Profile tab in a private Drafts section. They are not published until you manually post them.
 - **Don't accidentally post**: The red "Post" button publishes immediately with no confirmation dialog. Double-check all details before tapping it.
 - **Publishing page text entry quirk**: `type_text` may not directly insert text into TikTok's description field. Instead, the text goes to the device clipboard. Workaround: tap the description field to trigger the iOS **Paste / Writing Tools / AutoFill** popup, then tap **"Paste"** to insert the text. This is reliable.
 - **Maximum 5 hashtags per post**: TikTok enforces a limit of 5 hashtags. If you include more, extras are auto-removed with a toast message "Maximum 5 hashtags. 2 removed." Plan your hashtags accordingly.
-- **Multi-select: tap selector circles, NOT image centers**: In multi-select mode, tapping the center of a photo opens a single-image preview instead of selecting it. You must tap the **circle selector** in the upper-right corner of the thumbnail (~x=589 for right column, ~x=186 for left column, at the top edge of the photo cell).
+- **Multi-select: tap selector circles, NOT image centers**: In multi-select mode, tapping the center of a photo opens a single-image preview instead of selecting it. You must tap the **circle selector** in the upper-right corner of the thumbnail.
 - **Sound picker "For You" tab is contextual**: The For You tab in the sound picker shows personalized/contextual suggestions. The algorithm matches sounds to your content (e.g., bird photos surface "Three Little Birds").
 
 ## Key Workflows
@@ -517,22 +516,22 @@ When backing out of the editing screen with unsaved content, a menu appears:
 ### Browse the For You Feed
 ```
 1. open_app("TikTok") → screenshot to verify
-2. Tap "For You" tab if not already selected (~481, 118)
-3. Watch current video, swipe up from (200, 700) to next video
+2. Tap "For You" tab if not already selected (top bar)
+3. Watch current video, swipe up from center-left to advance to next video
 4. screenshot → verify new video loaded
 ```
 
 ### Like a Video
 ```
 1. screenshot → verify you're on a video
-2. Option A: double_tap(300, 500) — double-tap center of video
-3. Option B: tap(575, 740) — tap the heart icon directly
+2. Option A: double_tap center of video
+3. Option B: tap the heart icon on the right side
 4. screenshot → verify heart turned red
 ```
 
 ### Comment on a Video
 ```
-1. tap(575, 860) — tap the comment bubble icon
+1. Tap the comment bubble icon on the right side
 2. screenshot → verify comment section opened
 3. Tap "Add comment..." text field
 4. type_text("your comment")
@@ -542,14 +541,14 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Follow a Creator
 ```
-1. Tap the red + button below the creator avatar (~590, 655)
+1. Tap the red + button below the creator avatar on the right side
 2. OR tap creator avatar → tap Follow button on their profile
 3. screenshot → verify Follow button changed to Following
 ```
 
 ### Share a Video
 ```
-1. tap(575, 1010) — tap the share/forward arrow
+1. Tap the share/forward arrow on the right side
 2. screenshot → see share options
 3. Tap desired option (Copy link, SMS, etc.)
 4. screenshot → verify
@@ -557,7 +556,7 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Search for Content
 ```
-1. Tap the search icon (magnifying glass, ~577, 118) in top bar
+1. Tap the search icon (magnifying glass) in the top bar (far right)
 2. screenshot → search page appears
 3. Tap the search field → type_text("search query")
 4. screenshot → verify autocomplete suggestions appear
@@ -567,7 +566,7 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Filter Search Results
 ```
-1. On search results page, tap three-dot menu (~583, 118)
+1. On search results page, tap three-dot menu (right of search bar)
 2. Tap "Filters"
 3. Select desired Sort by / Video category / Date posted pills
 4. Tap "Apply" (top-right of filter sheet)
@@ -583,11 +582,11 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Take and Post a Photo
 ```
-1. Tap + button (~310, 1240) to open creation screen
+1. Tap the + button (center of bottom tab bar) to open creation screen
 2. Ensure PHOTO mode is selected (white capture button)
-3. Tap the capture button (~310, 1055)
+3. Tap the capture button (center)
 4. Edit: add text (Aa), stickers, effects as needed
-5. Tap "Next" (~465, 1232)
+5. Tap "Next" (bottom-right)
 6. Add title, description with #hashtags and @mentions
 7. Set location, visibility, other options
 8. Tap "Post" to publish OR "Drafts" to save for later
@@ -595,8 +594,8 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Record a Video
 ```
-1. Tap + button (~310, 1240)
-2. Swipe right on mode bar (~300, 970) to select 15s/60s/10m
+1. Tap the + button (center of bottom tab bar)
+2. Swipe right on mode bar to select 15s/60s/10m
 3. Record button turns red — tap to start, tap again to stop
    OR hold to record, release to stop
 4. Edit: add sound, text, effects, stickers
@@ -605,7 +604,7 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Add Sound to a Post
 ```
-1. On camera screen, tap "Add sound" (~310, 150)
+1. On camera screen, tap "Add sound" (top center)
 2. Browse tabs (Hot, For You, Favorites, Recent) or search
 3. Tap a sound to select it — appears in top bar
 4. Tap scissors icon to trim the clip
@@ -614,7 +613,7 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Create a Text Post
 ```
-1. Tap + button (~310, 1240)
+1. Tap the + button (center of bottom tab bar)
 2. Swipe left on mode bar past PHOTO to TEXT
 3. Type your text in the input area
 4. Tap "Next" → choose a template style
@@ -623,31 +622,30 @@ When backing out of the editing screen with unsaved content, a menu appears:
 
 ### Visit a Creator's Profile
 ```
-1. Option A: tap(575, 630) — tap their avatar on the right side
-2. Option B: swipe left from center of video (swipe(400, 500, "left"))
-3. Option C: tap their name in the caption area
+1. Option A: Tap their avatar on the right side of the video
+2. Option B: Swipe left from center of video
+3. Option C: Tap their name in the caption area (bottom-left)
 4. screenshot → verify profile page loaded
-5. To go back: tap back arrow (< at ~30, 115) or swipe right from left edge
+5. To go back: tap back arrow (< top-left) or swipe right from left edge
 ```
 
 ### Open Sound Page
 ```
-1. Tap the spinning music disc at bottom-right (~575, 1130)
+1. Tap the spinning music disc at the bottom-right of the video
 2. screenshot → verify sound page opened
 3. To go back: swipe right from left edge
 ```
 
 ## Tips and Gotchas
 
-- **Screen dimensions**: 619x1344 pixels. (0,0) is top-left.
-- **Right-side buttons shift**: The y-coordinates of action buttons vary slightly per video depending on the creator info area height. Always screenshot first and adjust coordinates.
-- **LIVE stream exit**: The X button on live streams requires tapping at **x=630** (beyond the visible 619px screen width). Tapping at normal visible coordinates (590-618) hits the adjacent toggle button instead. This is a known quirk.
+- **Right-side buttons shift**: The positions of action buttons vary slightly per video depending on the creator info area height. Always screenshot first and adjust if needed.
+- **LIVE stream exit**: The X button on live streams requires tapping **beyond the visible screen edge** to the right. Tapping at normal visible positions hits the adjacent toggle button instead. This is a known quirk.
 - **Non-fullscreen videos**: Horizontal videos show in a smaller frame with a "Full screen" button. The action buttons are positioned differently in this mode — they appear below the video frame rather than overlaid on it.
 - **"Not interested" / "Follow" buttons**: These appear at the bottom for videos from creators you don't follow. They can shift other elements up slightly.
 - **Search suggestion bar**: Some videos show a search bar at the very bottom, above the tab bar. This pushes the tab bar down slightly.
 - **AssistiveTouch**: Can be triggered accidentally by dragging from certain screen positions. If it appears (a floating menu with Tap, Gestures, Home, etc.), tap outside it to dismiss.
-- **Comment section vs heart button**: These are close together on the right side (~80px apart). If you're hitting comments when trying to like, aim higher (lower y value). If you're liking when trying to comment, aim lower (higher y value).
+- **Comment section vs heart button**: These are close together on the right side. If you're hitting comments when trying to like, aim higher. If you're liking when trying to comment, aim lower.
 - **Single tap pauses/plays**: Tapping the center of the video toggles playback. This means the video may be paused after you tap to dismiss overlays. The video auto-resumes when you swipe to the next one.
-- **Swipe from center**: Always swipe up/down from the center-left area (x=200) of the screen to avoid hitting right-side buttons or triggering edge gestures.
+- **Swipe from center**: Always swipe up/down from the center-left area of the screen to avoid hitting right-side buttons or triggering edge gestures.
 - **Phone deselection**: With multiple phones connected, the phone may deselect between tool calls. If you get a "multiple phones connected" error, re-run `select_phone` with the phone ID and retry.
 - **Video load time**: After swiping to a new video, it takes 1-2 seconds to load. If the screenshot looks transitional (two videos visible), take another screenshot after a moment.
