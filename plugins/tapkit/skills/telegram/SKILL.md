@@ -166,6 +166,100 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 - Telegram Premium, My Stars, Telegram Business, Send a Gift
 - Ask a Question, Telegram FAQ, Telegram Features
 
+## Search System
+
+Telegram has multiple search entry points and a rich filtering system for finding chats, contacts, messages, and media.
+
+### Search Entry Points
+
+There are 4 ways to search in Telegram:
+
+1. **Chats tab search bar** — below the "Chats" header and above the chat filter tabs. Tapping it opens the full global search interface.
+2. **Search tab** (magnifying glass, rightmost bottom tab) — opens the SAME search interface as #1. They're identical.
+3. **In-chat search** — from any chat's Info page. Tap the chat/group name in the header → tap the "search" action button. Opens a "Search this chat" field overlaid on top of the conversation.
+4. **Contacts search** — on the Contacts tab (leftmost bottom tab), there's a search bar below the header. Simpler search that only finds contacts and global users.
+
+### Global Search Interface (Entry Points 1 & 2)
+
+**Before typing (default state):**
+- A horizontal row of **frequent contacts** (circular avatars, scrollable left/right)
+- A **RECENT** section showing previous search items, with a "Clear" link on the right to clear history
+- **Filter tabs** at the bottom of the results area
+
+**After typing a query:**
+Results appear in organized sections:
+
+1. **RECENT** — previously searched items that match the query
+2. **CHATS AND CONTACTS** — local chats and contacts matching the name
+3. **GLOBAL SEARCH** — public Telegram channels, bots, and groups from the directory. Each shows:
+   - Avatar, name, @handle (in blue), subscriber/member count
+   - Verified accounts show a blue checkmark next to name
+   - A **"Show More" / "Show Less"** toggle link on the right to expand/collapse results
+4. **MESSAGES** — message content matches across all chats. Each shows:
+   - Chat avatar, chat name, sender name (for groups), timestamp
+   - Message preview with the search term in **bold**
+   - Tapping a message result navigates directly to that message in the conversation
+
+### Message Filter Dropdown
+
+In the MESSAGES section header, there's a **"From All Chats"** dropdown (with arrows). Tapping it opens a popover with 4 filter options:
+- **All Chats** — messages from everywhere (default)
+- **Private Chats** — only DM/1-on-1 messages
+- **Group Chats** — only group conversation messages
+- **Channels** — only channel messages
+
+The dropdown label updates to reflect the selection (e.g., "From Group Chats").
+
+### Search Filter Tabs (10 total)
+
+Below the search results, there's a horizontally scrollable row of filter tabs. There are **10 tabs total** — swipe left to reveal later ones:
+
+1. **Chats** — default view with all result sections (contacts, global, messages)
+2. **Channels** — only GLOBAL SEARCH results for public channels/groups
+3. **Apps** — searches for Telegram Mini Apps and bots. Shows a detective duck illustration on empty state.
+4. **Posts** (has a "NEW" badge) — searches public channel posts. **Premium-only feature** — non-Premium users see a "Subscribe to Premium" prompt.
+5. **Media** — photo/video grid (3 columns) of shared media across chats. Shows ALL recent media when no query is entered.
+6. **Downloads** — searches downloaded files
+7. **Links** — messages containing URLs. Shows message text, URL in blue, and breadcrumb path like "sender > chat name" to show origin.
+8. **Files** — searches shared documents
+9. **Music** — searches shared audio/music files
+10. **Voice** — searches voice messages
+
+### Chat-Specific Filter Pills
+
+When searching on the Chats tab, small **filter pills** (chips) appear at the bottom of results showing matching chats. Tapping one adds a blue chip inside the search field to narrow all results to that specific chat. The chip has an X button to remove the filter.
+
+### In-Chat Search
+
+Accessible from: open a chat → tap the name in the header → tap "search" action button on the Info page.
+
+- The search field shows **"Search this chat"** as placeholder (different from global search)
+- Messages in the chat remain visible behind the search overlay
+- Two filter icons appear below the search field on the left:
+  - **Calendar + magnifying glass** icon = search by date
+  - **Person + magnifying glass** icon = search by specific member/sender
+- Results navigate directly to matching messages within the conversation
+
+### Contacts Search
+
+Simpler than global search. Shows only two sections:
+1. **CONTACTS** — matching local contacts with name and last-seen status
+2. **GLOBAL SEARCH** — matching public Telegram users with name and @handle
+
+No filter tabs, no message search — just people.
+
+### Search Tips and Gotchas
+
+- **The Search tab and Chats search bar are identical** — don't waste time trying both, they open the same interface
+- **"Show More" in GLOBAL SEARCH reveals many more results** including international channels — useful for finding niche content
+- **The "From All Chats" dropdown is powerful** — use it to narrow message results by chat type (DMs vs groups vs channels)
+- **Posts search requires Telegram Premium** — this feature is gated
+- **Media tab works without a query** — shows a browsable grid of all shared media even before you type anything
+- **Links tab shows breadcrumbs** — "sender > chat name" format makes it easy to trace where a link came from
+- **Tapping a search result navigates to it** — message results jump directly to that message in the chat, useful for finding context
+- **In-chat search has date and member filters** — the two icons below the search field let you narrow by when something was said or who said it
+- **Filter tabs are horizontally scrollable** — only the first 5-6 are visible initially, swipe left to reveal Downloads, Links, Files, Music, Voice
+
 ## Key Workflows
 
 ### Send a Message to an Existing Chat
