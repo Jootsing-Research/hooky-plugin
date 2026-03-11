@@ -47,7 +47,7 @@ Each chat in the list shows:
 - Heart/reaction emoji if the last message was reacted to
 - Muted chats show a speaker-off icon next to the name
 
-## Three Types of Chats (Different UIs!)
+## Four Types of Chats (Different UIs!)
 
 ### 1. Direct Messages (1-on-1)
 - **Header**: "< [count]" back button (left), contact name + "last seen recently/within a week/etc" status (center), their profile photo (right)
@@ -70,6 +70,36 @@ Each chat in the list shows:
 - **Bottom bar**: Has a unique **"≡ Menu" button** on the left! This opens the bot's command menu. Then paperclip, "Message" field, timer, microphone
 - May show "Reply to [BotName]" prompt
 
+### 4. Channels / Restricted Groups (Read-Only)
+
+Channels look like groups in the chat list but are read-only for non-admin users.
+
+**How to identify a channel:** Once you open it, the bottom of the screen shows **"Sending messages is not allowed in this group."** instead of a message input bar. There is NO paperclip, NO message field, NO microphone/camera.
+
+- **Header**: Same as groups — "< [count]" back button, channel name + "N members, N online", channel icon
+- **Pinned message banner** at top (same as groups)
+- **Messages show sender names** with **"admin" badges** (green text) — note: groups use "owner" badges, channels use "admin"
+- **System messages** for pin actions: "Edgar pinned 'MTNDAO WEEK 4 R...'" appears as a centered gray system message
+- **Link previews** are embedded inline (e.g., X/Twitter card previews with image thumbnails)
+- **Emoji reactions** with counts (e.g., fire 8, heart 9) appear below messages
+- **Share button** (arrow icon) on the right side of messages — for forwarding
+- **Star icon** next to timestamps — indicates channel posts vs regular messages
+- **No message input bar** — replaced with "Sending messages is not allowed in this group." text
+
+| Feature | Regular Group | Channel/Restricted Group |
+|---------|--------------|-------------------------|
+| Can send messages | Yes | No — "Sending messages is not allowed" |
+| Bottom bar | Paperclip + Message field + timer + camera | Gray text only |
+| Role badges in chat | "owner" | "admin" |
+| Info page tabs | Members, Media, Files, Voice, Links | Members, Media, Links, GIFs |
+| Timestamp icon | None | Star icon next to time |
+| System messages | Join/leave notifications | Pin notifications ("X pinned 'Y'") |
+
+**Important for agents:**
+- **Don't try to send messages in channels** — there's no input field. Check for the "Sending messages is not allowed" text before attempting any message actions.
+- **Forwarding/sharing is the main interaction** — use the share (arrow) button on messages.
+- **Reacting is still possible** — long-press messages to add emoji reactions.
+
 ## Group Info Page
 
 Opened by tapping the group name in the header.
@@ -79,6 +109,31 @@ Opened by tapping the group name in the header.
 - **Tabs**: Members, Media, Files, Voice, Links (and possibly GIFs)
 - Members list shows names with role badges and last-seen status
 - "Add Members" link at top of members list
+
+## Channel Info Page
+
+Opened by tapping the channel name in the header. Similar to Group Info but with different tabs.
+
+- Channel avatar, name, member count + online count
+- **Action buttons**: mute, search, leave, more (...) — same as groups
+- **Tabs**: Members, Media, Links, GIFs (differs from groups which have Files and Voice instead of GIFs)
+- Members list shows **"admin"** and **"owner"** badges (both green)
+- "Add Members" link at top of members list
+
+## Saved Messages
+
+Accessible from Settings > Saved Messages. Acts like a personal chat with yourself.
+
+- **Header**: "< [count]" back button, "Saved Messages" title, search icon (magnifying glass, right)
+- Has a full message input bar — good for agents to use as a scratch pad or test area
+- Has a search icon in top-right instead of a profile photo
+
+## Message Checkmarks
+
+These appear in the chat list preview AND inside chats:
+- **Single checkmark** (✓) = sent but not delivered
+- **Double checkmark** (✓✓) in gray = delivered
+- **Double checkmark** (✓✓) in blue/green = read by recipient
 
 ## Context Menus (Long Press)
 
@@ -195,3 +250,5 @@ Accessed via Settings tab. Profile section at top shows avatar, name, phone numb
 - **Sponsored ads can appear** in bot chats — They have a "what's this?" label and X dismiss button. Dismiss these to avoid confusion.
 - **The Search tab** immediately opens the keyboard and shows FAQ by default. Just start typing — no need to tap the search field first since it auto-focuses.
 - **Navigation back**: Tap "< [count]" in top-left (y ~ 120, x ~ 70) or swipe right from the left edge of the screen.
+- **Channels are read-only** — they look like groups in the chat list but have no message input. Check for "Sending messages is not allowed" text before trying to send. Forwarding and reacting are the main interactions.
+- **Message checkmarks**: Single ✓ = sent, double ✓✓ gray = delivered, double ✓✓ blue = read. These show in chat list previews and inside chats.
