@@ -167,14 +167,106 @@ To go back: swipe right from left edge or swipe down.
 - **Stories row**: Create, friend avatars
 - **Video feed**: Content from friends (mutual follows)
 
-## Inbox Tab
+## Inbox Tab (Deep Dive)
 
-- **Header**: Group icon (left), "Inbox" with online indicator (green dot), search icon (right)
-- **Stories row**: Create, On this day, friends
-- **Categories**: New followers, Activity (with badge count), System notifications
-- **DM conversations**: With unread message badges
-- **Message requests**: Separate section
-- **TikTok Shop**: Seller messages
+### Accessing Inbox
+Tap the **Inbox** icon (chat bubble) in the bottom tab bar. Shows unread badge count.
+
+### Inbox Header
+- **Create group chat icon** (top-left) — Opens "Create group chat" page with search bar, suggested contacts with circle selectors, and "Create" button
+- **"Inbox" title** with green online dot and **dropdown arrow** (top center) — Tapping the dropdown opens an **Activity Status** sheet:
+  - **Public** — Anyone on TikTok can see your activity status
+  - **Friends** — Only mutual followers see status (default)
+  - **No one** — Hidden activity, but you can still see public users
+- **Search icon** (top-right) — Opens search page with "Account and messages" placeholder. Searches both contacts and message content. Shows "Suggested" contacts list.
+
+### Promo Banner
+A dismissible promotional banner may appear at the top (e.g., "Don't miss out! Hatch a Streak Pet together!" with Invite button and X dismiss).
+
+### Stories Row
+Horizontal scrollable row below the header:
+
+- **"What's good?"** label (above the row) — Tapping this opens a **Thoughts** composer:
+  - Full-screen editor with speech bubble + avatar
+  - Editable text placeholder "What's good?"
+  - "Your Thoughts are visible for 24 hours" disclaimer
+  - "Your Story" button to post
+  - Gear icon (settings), camera icon, audience icon on right side
+  - This is TikTok's ephemeral text status feature
+- **Create** (+ button on avatar) — Opens photo picker to create a Story
+- **"On this day"** — Shows memories from the same date in prior years (lock icon, pink dot). May not always appear.
+- **Friend avatars** with ring colors:
+  - **Pink/magenta ring** = Currently LIVE streaming. Tapping opens their LIVE stream directly.
+  - **Cyan/teal ring** = Has an active Story. Tapping opens their Story viewer.
+  - **No ring** = Active/suggested contact, no current story or LIVE.
+  - **Pink speech bubble badge** (bottom-right of avatar) = has unread messages/interactions
+
+### Categories List (Main Inbox Sections)
+
+Each category has an icon, title, subtitle/preview, and optional badge:
+
+1. **Chat with contacts** (green phone icon) — "Find and chat with them" with red "Find" button. Opens a contacts sync prompt asking for full contact access.
+
+2. **New followers** (blue people icon) — Shows latest follower name + badge count.
+   - **New followers page**: Follower list with avatar, display name, relationship context, "started following you." + date
+   - Action buttons: "Message" (for contacts you follow) or "Follow back" (pink)
+   - "View more" dropdown, "Suggested accounts" section below
+
+3. **Activity** (pink heart icon) — Shows latest activity + badge count.
+   - **Activity page**: "Priority" section (important notifications) and "Others" section (lower-priority items)
+   - "View all" dropdown, "Suggested accounts" section at bottom
+
+4. **TikTok Tako** (TikTok logo speech bubble) — TikTok's built-in AI assistant.
+   - Welcome message, suggested question cards, text input ("Type or hold to talk")
+   - Bottom tools: "AI Imagine", "Edit image", "Study lens"
+   - Image upload, avatar sticker, microphone icons
+
+5. **System notifications** (dark briefcase icon) — Shows latest notification + pink dot.
+   - Filter tabs: All, Promote Assistant, LIVE, Account updates
+   - Notification cards with category tags, titles, descriptions, timestamps
+
+6. **Message requests** (dark speech bubble icon) — "You have N requests" + badge.
+   - Messages from non-friends/non-followers land here
+
+### DM Conversations List
+
+Below categories, individual DM conversations appear with:
+- Avatar (optional green dot/cyan ring/LIVE badge)
+- Display name (optional blue checkmark, emojis, "+ Follow back" link)
+- Message preview/status
+- Right side: red badge (unread), wave emoji ("Say hi"), camera (media), pink dot
+
+**Swipe left on conversation**: wave, Delete, Mute, Report buttons
+
+**Suggested accounts** section at bottom with Follow buttons + X dismiss
+
+### DM Chat Interface
+
+**Header:** Back arrow, avatar with online ring, display name, flag icon, three-dot menu
+
+**Chat:** Blue bubbles (sent, right), gray bubbles (received, left with avatar). Timestamps, "Seen" receipts, system messages. Shared videos as thumbnail cards with play/reply/react buttons.
+
+**Quick Reactions Row:** Heart, laugh, thumbs up + Effects, Cards, Streak Pet, more (scrollable)
+
+**Input Bar:** Camera (left), text field, image/gallery, avatar sticker, microphone (right)
+
+**Long-press message:** Emoji reactions, Reply, Forward, Copy, Translate, Delete for me (red), Report (red, received messages only)
+
+**Chat Settings (three-dot):** View profile, Search in conversation, Mute notifications toggle, Pin to top toggle, Report
+
+### TikTok Shop Messages
+Orange shopping bag icon. "Shop updates" (order reviews, delivery tracking) + "Messages" (seller conversations)
+
+### Inbox Tips and Gotchas
+- Stories row avatars rotate each visit
+- **Pink ring = LIVE** (not Story), **cyan ring = Story** — don't confuse them
+- "On this day" only appears when memories exist from the same date in prior years
+- "What's good?" is interactive — opens Thoughts composer, not just a label
+- Swipe left on conversations reveals Delete/Mute/Report actions
+- Message requests are separate from main inbox — non-friends land there
+- "Keep chatting to unlock a..." = streak gamification
+- Streak Pet = daily messaging gamification feature
+- TikTok Tako AI assistant lives in Inbox categories
 
 ## Sponsored / Ad Videos
 
