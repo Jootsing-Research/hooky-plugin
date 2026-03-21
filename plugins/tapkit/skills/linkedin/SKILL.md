@@ -257,16 +257,85 @@ Subtitle: "Based on your profile, preferences, and activity like applies, search
 - Job title (bold) with optional verification badge
 - Company name
 - Location + work type (On-site, Hybrid, Remote)
-- Salary range (e.g., "$307K/yr - $427K/yr" or "$70/hr - $120/hr")
-- Optional: benefit count (e.g., "5 benefits")
+- Salary range (e.g., "$307K/yr - $427K/yr" or "$70/hr - $120/hr") — $/yr, $/hr, $/month formats all appear
+- Optional: inline benefits (e.g., "401(k), +1 benefit" or "Vision, 401(k), +2 benefits")
 - Social proof: Stacked avatar icons + "X connections work here" or "X school alumni work here"
-- Badges: "Promoted" (gray), "Be an early applicant" (green), "You'd be a top applicant" (orange folder icon)
+- Badges: "Promoted" (gray), "Be an early applicant" (green), "You'd be a top applicant" (orange folder icon), "Actively reviewing applicants" (green checkmark + green text), "Easy Apply" with LinkedIn "in" icon
+- **Time posted** in green text (e.g., "2 hours ago", "6 days ago")
+- **"Viewed"** label (gray) appears on cards after you've viewed the job detail
 - **X dismiss button** (right)
 
 "Show all" link at bottom of section
 
 ### "Explore companies that hire for your skills" Section
-Horizontal scroll of company cards (Promoted)
+Horizontal scroll of company cards (Promoted). Each card shows:
+- Large company logo on promotional background image
+- Three-dot menu, company name (bold), employee count + location
+- School alumni badge + count, "Who We Are" description snippet
+
+### "More jobs for you" Section
+Below Explore companies. Same subtitle as "Top job picks". Infinite scroll of additional job recommendations.
+
+### Job Detail Page
+
+Tapping a job card opens a detail page as a **bottom sheet** that can expand to full screen.
+
+**Initial State (Half-Sheet):**
+- **Handle bar** (top center) — drag to expand or dismiss
+- **Three-dot menu** (top-right)
+- Company logo + name, job title (large, bold), location · time posted · applicant info
+- **Posting context** — "Responses managed off LinkedIn" (external) or "Actively reviewing applicants" (green, Easy Apply)
+- **Info pills**: Salary range, Work type (On-site/Remote/Hybrid), Employment type (Full-time/Part-time/Contract)
+
+**Two Application Types:**
+- **External Apply:** "Apply" button (blue) with external link icon — redirects to company website
+- **Easy Apply:** "Easy Apply" button (blue) with LinkedIn "in" icon — application within LinkedIn
+- Both have a **"Save"** button (outlined) next to the Apply button
+
+**Sticky Bottom Bar:** Apply/Save buttons persist when scrolled.
+**Sticky Header (When Scrolled):** X close, compact job title + company + location, three-dot menu.
+
+**Sections (top to bottom):**
+1. **Premium AI Assessment** — "Show match details", "Create cover letter" (external) or "Help me stand out" (Easy Apply)
+2. **People you can reach out to** — Contact cards with email/phone, send icon
+3. **Meet the hiring team** (Easy Apply only) — Job poster info with send icon
+4. **About the job** — Description with "...more" to expand
+5. **Featured benefits** (Easy Apply only) — Comma-separated list
+6. **Requirements** (Easy Apply only) — Bulleted list
+7. **Set alert for similar jobs** — Toggle (default Off)
+8. **Resume writer promo card** (dismissible)
+9. **Premium: "See how you compare"** — Applicant count, seniority level bar, education breakdown
+10. **Premium: Company Insights** — Powered by Bing. Focus areas, hiring trends, growth chart, median tenure, competitors
+11. **About the company** — Logo + follower count + Follow button
+12. **"Interested in working with us?"** — "I'm interested" button
+13. **Company photos** — Horizontal scroll
+14. **More jobs** — Related listings
+
+### Job Tracker
+
+Full-screen page accessed via "Job tracker" pill.
+
+- **Header**: X close, "Job tracker" title
+- **Filter pills**: Stage dropdown (green), Date posted dropdown
+- **5 pipeline stages**: Saved, In Progress, Applied, Interview, Archived
+- **"Update"** button at bottom of stage dropdown
+- **Empty state**: Illustration + "No jobs here" + "Find more jobs" button
+
+### Preferences
+
+Full-screen page accessed via "Preferences" pill.
+
+**My interests:** Open to work, Job alerts, AI trainer project alerts, Pay
+**My qualifications:** Resumes and application data
+**My verifications:** Verifications
+
+### AI Job Search ("Describe the job you want")
+
+Tapping the search bar on the Jobs tab opens a natural language job search.
+
+- Suggested prompt pills (2-column grid) with emoji icons
+- Welcome text explaining the feature
+- **Results:** Filter pills (Jobs, Date posted, Easy Apply, Company), auto-detected location with pin icon, result count, job cards, "Get job alerts for this search" toggle
 
 ## Search
 
@@ -342,11 +411,15 @@ Tap the **Messages icon** (speech bubble with badge) in the top-right of the top
 **Filter pills** (horizontal scroll):
 "Focused" (selected, green with dropdown arrow), Jobs, Unread, Drafts, InMail
 
-The "Focused" pill has a dropdown arrow — tapping may change the inbox filter mode.
+**Focused dropdown** opens a **"Folders"** bottom sheet with 4 folders: Focused (default), Other, Archived, Spam.
+
+**Filter pill behavior:** Selected pills move to second position and turn green. InMail filter removes the "InMail · " prefix from previews. Sponsored messages appear under InMail filter.
+
+**Three-dot menu:** Manage conversations, Set away message, Manage settings.
 
 **Conversation list** (vertically scrolling):
 Each row shows:
-- Avatar (left) — profile photo or company logo
+- Avatar (left) — profile photo or company logo, **green dot** for online contacts
 - Name (bold)
 - Message preview (truncated) — shows "InMail · " prefix for InMail messages, "Sponsored · " prefix for sponsored messages
 - Timestamp (right) — "12:43 pm", "Feb 25", "Jan 12", etc.
@@ -356,6 +429,15 @@ Each row shows:
 - Regular DMs: avatar + name + preview
 - InMail: "InMail · [subject]" prefix — messages from non-connections
 - Sponsored: "Sponsored · [content]" prefix with company/institution logo
+
+### Compose New Message
+
+Accessed via compose icon (pencil-in-square) in message list header.
+
+- **Header**: X close, "New message" title
+- **"To:" field** — "Type a name or multiple names" (supports group messaging)
+- **Suggested contacts list** — avatars with headlines, shows recent/frequent contacts
+- Message body field appears after recipient is selected
 
 ### DM Chat Interface
 
@@ -370,17 +452,32 @@ Each row shows:
 - Messages appear left-aligned (both sent and received)
 - Received messages have avatar + name + LinkedIn badge + timestamp
 - Link previews appear as embedded cards (image, title, subtitle, domain)
-- Emoji reaction button (smiley face with +) below messages
+- Emoji reaction button (smiley face with +) below messages — opens **full iOS emoji picker** (NOT the 6 LinkedIn feed reactions)
+- **Read receipt**: Small avatar thumbnail in bottom-right below last message indicates it was seen
 
 **Quick reply suggestions:**
 Contextual pill buttons appear at the bottom of the chat based on the last message (e.g., "Home", "At home", "At the office" in response to "Where are u?")
 
 **Input area (bottom):**
-- Attachment icon (paperclip, left)
+- Attachment icon (paperclip, left) — expands 5 options: Send a document, Take a photo or video, Select media from library, Send a GIF, Mention a person. Paperclip changes to X to dismiss.
 - "Write a message..." text field (center)
 - Microphone icon (right) — voice message
 
+**Conversation three-dot menu** (10 options): Move to Other, Label as Jobs, Mark as unread, Star, Mute, Archive, Create group chat, Report/Block, Delete conversation, Manage settings.
+
 **Tab bar is NOT visible** in the DM chat interface.
+
+### InMail Conversations
+
+InMail has significant UI differences from regular DMs:
+
+- **No online status** in header (senders are typically non-connections)
+- **Subject line** displayed in bold above message body
+- **Pronouns** shown after name (e.g., "She/Her")
+- **Date separators** in centered uppercase
+- **Legal fine print** at top (privacy, opt-out, accommodations)
+- **Quick reply templates** instead of contextual suggestions: "Yes, interested..." and "No thanks..." (with pencil icons for editing)
+- **Send arrow** replaces the microphone icon in input area
 
 ## Post Creation
 
@@ -390,11 +487,11 @@ Tap the **create/compose icon** (pencil-in-square) in the top bar. Opens a full-
 ### Composer Layout
 
 **Header:**
-- **X close** (left) — exits composer. If content was entered, may prompt to discard or save as draft.
+- **X close** (left) — exits composer. If content was entered, shows action sheet: "Save this post for later?" with Save, Discard (red), Cancel buttons.
 - **Profile avatar** — your photo
 - **"Anyone" dropdown** — visibility selector, tappable to change audience
-- **Clock/schedule icon** — schedule the post for later
-- **"Post" button** (right) — grayed out when empty, active when content is entered
+- **Clock/schedule icon** — schedule the post for later (see Scheduling below)
+- **"Post" button** (right) — grayed out when empty, blue when content is entered
 
 **Text area:**
 - Placeholder: "Share your thoughts..."
@@ -402,21 +499,55 @@ Tap the **create/compose icon** (pencil-in-square) in the top bar. Opens a full-
 - Keyboard appears automatically
 
 **Bottom toolbar** (above keyboard):
-- **"Rewrite with AI"** button (sparkle icon) — AI-powered caption rewriting
-- **Character/hashtag counter** (e.g., "0/20")
+- **"Rewrite with AI"** button (sparkle icon) — AI-powered caption rewriting (see below)
+- **Hashtag counter** (e.g., "0/20") — tracks hashtags used out of 20 max
 - **Image/photo icon** — add media
-- **"+" icon** — opens content type picker
+- **"+" icon** — opens content type picker (replaces keyboard; tapping text area brings keyboard back)
+
+### Rewrite with AI (Full Flow)
+
+1. Type text in the composer
+2. Tap "Rewrite with AI" — AI rewrites text in-place (subtle rewording)
+3. Below the rewritten text: **"Undo"** button (left) + **thumbs up/down** feedback (right)
+4. Can tap "Rewrite with AI" again for another variation
+5. Undo reverts to original text
+
+### Scheduling Feature (Clock Icon)
+
+If text was AI-rewritten, tapping the clock icon first shows a warning: **"Schedule without editing?"** with "Schedule" and "Keep editing" buttons.
+
+**Schedule bottom sheet:**
+- Date field (pre-filled with today), Time field (pre-filled with nearest time)
+- Timezone info (e.g., "UTC-04:00, Eastern Time")
+- "View all" link to see scheduled posts
+- "Next" button
 
 ### Content Type Picker (+ Button)
 
 Grid of circular icons with labels (3 columns):
 - **Media** (landscape photo icon) — Add photos/videos
 - **Event** (calendar icon) — Create an event
-- **Celebrate** (starburst badge icon) — Celebration post
+- **Celebrate** (starburst badge icon) — Celebration post (see below)
 - **Job** (briefcase icon) — Post a job listing
-- **Poll** (bar chart icon) — Create a poll
+- **Poll** (bar chart icon) — Create a poll (see below)
 - **Document** (document icon) — Upload a document/carousel
 - **Services** (storefront icon) — Offer services
+
+### Poll Creation
+
+- "Create a poll" screen: Your question (0/140 chars), Option 1 (0/30 chars), Option 2 (0/30 chars)
+- "+ Add option" button for more options
+- Poll duration dropdown (default "7 days")
+- "Done" button activates when required fields filled
+
+### Celebrate Post Types
+
+Opens "Select an option" screen with 5 types:
+1. **Project Launch** — Share a new project milestone
+2. **Work Anniversary** — Celebrate a career milestone
+3. **New Position** — Share a job update
+4. **New Educational Milestone** — Share an educational milestone
+5. **New Certification** — Celebrate a new certification
 
 ### Visibility Settings
 
